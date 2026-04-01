@@ -15,6 +15,7 @@ public static UIManager instance;
 
     public GameObject winPanel;
     public GameObject losePanel;
+    public Text loosText;
     public void UpdateText()
     {
        int n =  GameManager.instance.GetCollectedCount;
@@ -30,8 +31,9 @@ public static UIManager instance;
     {
         winPanel.SetActive(true);
     }
-    public void OnLoose()
+    public void OnLoose(string value)
     {
         losePanel.SetActive(true);
+        loosText.text =value;
     }
 }

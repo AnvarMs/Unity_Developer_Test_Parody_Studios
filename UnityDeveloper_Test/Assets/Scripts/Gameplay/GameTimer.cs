@@ -19,7 +19,7 @@ public class GameTimer : MonoBehaviour
 
         if (time <= 0)
         {
-            UIManager.instance.OnLoose();
+            UIManager.instance.OnLoose("Time's Up");
             isTimerEnd = true;
         }
 
