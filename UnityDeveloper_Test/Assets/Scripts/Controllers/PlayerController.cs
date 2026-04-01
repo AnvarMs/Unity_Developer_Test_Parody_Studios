@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         // Alternative: Use sphere cast for more reliable detection
         isGrounded = Physics.SphereCast(
             groundCheck.position,
-            0.2f,
+            0.1f,
             currentGravityDirection,
             out RaycastHit hit,
             groundCheckDistance,
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
         
         animator.SetBool("running", isMoving);
         animator.SetBool("idle", !isMoving);
-        animator.SetBool("jumping", isGrounded);
+        animator.SetBool("jumping", !isGrounded);
     }
     
     private void Jump(InputAction.CallbackContext context)
