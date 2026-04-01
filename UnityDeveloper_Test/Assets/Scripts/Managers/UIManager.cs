@@ -17,8 +17,8 @@ public static UIManager instance;
     public GameObject losePanel;
     public void UpdateText()
     {
-       int n =  GameManager.instance.GetCollectedCount();
-        int x =GameManager.instance.GetTotalCubeCound();
+       int n =  GameManager.instance.GetCollectedCount;
+        int x =GameManager.instance.GetTotalCubeCound;
        countText.text = $"{n}/{x}"; 
     }
     public void UpdateTimerText(string value)

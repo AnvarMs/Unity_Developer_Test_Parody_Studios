@@ -17,15 +17,28 @@ public class GameManager : MonoBehaviour
 
     public void OnCubeCollect()=>collected+=1;
 
-    public bool IsAllCollected()=>collected==cubesToCollect;
+    public bool IsAllCollected()=>collected>=cubesToCollect;
 
-    public int GetCollectedCount()=>collected;
-    public int GetTotalCubeCound()=>cubesToCollect;
+    public int GetCollectedCount=>collected;
+    public int GetTotalCubeCound=>cubesToCollect;
     public void StartGame()=>collected =0;
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Escape))
+    {
+        Application.Quit(); 
+    }
+
+    if (Input.GetKeyDown(KeyCode.Return)) 
+        {
+            if(IsAllCollected()||UIManager.instance.losePanel.activeSelf)
+                RestartGame();
+        }
+}
 
 }
