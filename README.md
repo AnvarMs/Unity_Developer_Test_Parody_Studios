@@ -9,6 +9,21 @@ A 3D puzzle platformer where players manipulate gravity to navigate levels and c
 **Game Build:**
 [Download for Windows/Mac](https://anvarms.itch.io/gravitypuzzle) - [itch.io Link]
 
+## ⚠️ Platform Testing Status
+
+| Platform | Build Status | Testing Status |
+|----------|-------------|----------------|
+| **Windows** | ✅ Built | ✅ Fully Tested |
+| **Mac** | ✅ Built | ⚙️ Not Tested* |
+
+**\*Mac Build Disclaimer:**  
+The macOS build was generated using Unity's standard build pipeline with Universal 
+architecture (Apple Silicon + Intel). However, I do not have access to Mac hardware 
+for testing. The build follows Unity's recommended settings and should function 
+correctly, but I cannot guarantee full compatibility without testing.
+
+If you encounter any Mac-specific issues, please let me know and I'll be happy to 
+address them. The Windows build has been thoroughly tested and verified working.
 
 ## 🎯 Objective
 
