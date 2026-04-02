@@ -134,7 +134,7 @@ public class GravitySelector : MonoBehaviour
         );
         
         // Position hologram
-        p_Hologram.transform.position = transform.position + transform.up * 2f + hologramUp;
+        p_Hologram.transform.position = transform.position + transform.up * 2f ;
     }
     
     void ApplySelection()
