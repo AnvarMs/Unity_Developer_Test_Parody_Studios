@@ -7,7 +7,7 @@ A 3D puzzle platformer where players manipulate gravity to navigate levels and c
 ### Standalone Builds
 
 **Game Build:**
-[Download for Windows/Mac](https://anvarms.itch.io/gravitypuzzle) - [itch.io Link]
+[Download for Windows/Mac](https://anvarms.itch.io/gravitypuzzle) 
 
 ## ⚠️ Platform Testing Status
 
@@ -80,19 +80,23 @@ Collect all cubes before the 3-minute timer expires.
 ```
 Assets/
 ├── Scripts/
-│   ├── PlayerController.cs
-│   ├── CameraController.cs
-│   ├── GravitySelector.cs
-│   ├── GameManager.cs
-│   └── ControlsDisplay.cs
-├── Prefabs/
-│   ├── Player
-│   ├── Collectible
-│   └── Hologram
+│   ├── Controllers/         # Player and camera controllers
+│   │   ├── CameraController.cs
+│   │   └── PlayerController.cs
+│   ├── Gameplay/            # Game mechanics
+│   │   ├── GravitySelector.cs
+│   │   ├── GameTimer.cs
+│   │   └── PointCubes.cs
+│   └── Managers/            # Game and UI management
+│       ├── GameManager.cs
+│       └── UIManager.cs
 ├── Scenes/
-│   └── MainLevel
-└── Materials/
-    └── HologramMaterial
+│   └── MainLevel.unity      # Main game scene
+├── Materials/
+│   └── Materials_Holo/      # Hologram materials
+├── Models/                  # Character models (from base project)
+├── Animations/              # Character animations (from base project)
+└── Settings/                # Input system configuration
 ```
 
 ## 🚀 Building from Source
